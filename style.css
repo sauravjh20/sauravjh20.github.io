@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -11,20 +11,19 @@ body {
     color: #555f6b;
 }
 
-/* Wrapper */
+/* WRAPPER */
 .page-wrapper {
     min-height: 100vh;
 }
 
 /* ===================== */
-/* FIXED LEFT SIDEBAR */
+/* FIXED SIDEBAR */
 /* ===================== */
 
 .sidebar {
     width: 290px;
     background: #3BA4D8;
     color: white;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -39,7 +38,6 @@ body {
     overflow: hidden;
 }
 
-/* Group areas */
 .sidebar-top {
     display: flex;
     flex-direction: column;
@@ -54,7 +52,6 @@ body {
     gap: 14px;
 }
 
-/* Profile photo */
 .profile-pic img {
     width: 145px;
     height: 145px;
@@ -63,23 +60,19 @@ body {
     border: 4px solid #fff;
 }
 
-/* Name */
 .sidebar-name {
     font-size: 20px;
     font-weight: 800;
-    letter-spacing: 1.5px;
     white-space: nowrap;
 }
 
-/* Title */
 .sidebar-title {
     font-size: 11px;
-    text-transform: uppercase;
     letter-spacing: 3px;
     text-align: center;
 }
 
-/* Navigation */
+/* NAVIGATION */
 .sidebar-nav {
     display: flex;
     flex-direction: column;
@@ -100,12 +93,13 @@ body {
     opacity: 0.85;
 }
 
-/* Social Icons */
+/* SOCIAL ICONS */
 .sidebar-social {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;     /* keep in one line */
+    gap: 12px;
     justify-content: center;
+    align-items: center;
 }
 
 .sidebar-social a {
@@ -124,7 +118,7 @@ body {
     background: #4b5563;
 }
 
-/* Footer text */
+/* FOOTER */
 .sidebar-footer {
     font-size: 11px;
     opacity: 0.8;
@@ -132,39 +126,35 @@ body {
 }
 
 /* ===================== */
-/* RIGHT SIDE CONTENT */
+/* RIGHT CONTENT */
 /* ===================== */
 
 .content {
     margin-left: 290px;
     padding: 60px 70px;
-    max-width: 1100px;  /* wider so hero name fits on one line */
+    max-width: 1100px;
 }
 
-/* HERO title */
+/* HERO */
 .hero-name {
     font-size: 64px;
     font-weight: 900;
     letter-spacing: 3px;
-    margin-bottom: 12px;
-    white-space: nowrap; /* keep single line */
+    white-space: nowrap;
 }
 
 .hero-name span {
     color: #3BA4D8;
-    white-space: nowrap;
 }
 
 .hero-subtitle {
     font-size: 18px;
     margin-top: 5px;
-    color: #5b6470;
 }
 
 .hero-location {
     margin: 12px 0;
     font-size: 14px;
-    color: #6b7580;
 }
 
 .hero-location a {
@@ -176,7 +166,6 @@ body {
     white-space: nowrap;
 }
 
-/* Resume button */
 .hero-resume {
     padding: 8px 20px;
     border: 2px solid #3BA4D8;
@@ -193,7 +182,7 @@ body {
     color: white;
 }
 
-/* Sections */
+/* SECTIONS */
 .section {
     margin: 60px 0;
 }
@@ -201,8 +190,8 @@ body {
 .section-title {
     font-size: 18px;
     color: #3BA4D8;
-    letter-spacing: 2px;
     margin-bottom: 12px;
+    letter-spacing: 2px;
     font-weight: 700;
 }
 
@@ -211,7 +200,7 @@ body {
     line-height: 1.7;
 }
 
-/* Experience items */
+/* EXPERIENCE */
 .item {
     margin-bottom: 22px;
 }
@@ -237,19 +226,106 @@ body {
     line-height: 1.7;
 }
 
-/* Skills grid */
+/* ===================== */
+/* SKILL LOGO GRID */
+/* ===================== */
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
 }
 
-.skills-grid h4 {
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    transition: 0.2s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.skill-card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    font-weight: 600;
     font-size: 14px;
+}
+
+/* ===================== */
+/* EDUCATION LAYOUT */
+/* ===================== */
+
+.edu-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.edu-logo img {
+    width: 140px;
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.edu-main {
+    flex: 1;
+}
+
+.edu-main h4 {
+    font-size: 18px;
+    font-weight: 800;
     margin-bottom: 4px;
 }
 
-/* Links */
+.edu-degree {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.edu-location {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.edu-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.edu-list {
+    margin-left: 18px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.edu-dates {
+    min-width: 140px;
+    text-align: right;
+    font-size: 13px;
+    color: #3BA4D8;
+    font-weight: 600;
+}
+
+/* LINKS */
 a {
     color: #3BA4D8;
 }
@@ -258,17 +334,12 @@ a:hover {
     opacity: 0.85;
 }
 
-/* Mobile responsiveness */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-
     .sidebar {
-        position: relative;
         width: 100%;
+        position: relative;
         height: auto;
-    }
-
-    .sidebar-name {
-        white-space: normal;
     }
 
     .content {
@@ -276,8 +347,22 @@ a:hover {
         padding: 40px 20px;
     }
 
+    .sidebar-name {
+        white-space: normal;
+    }
+
     .hero-name {
         font-size: 40px;
         white-space: normal;
+    }
+
+    .edu-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edu-dates {
+        text-align: left;
+        margin-top: 6px;
     }
 }
