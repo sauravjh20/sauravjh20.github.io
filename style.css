@@ -5,23 +5,25 @@
     box-sizing: border-box;
 }
 
-/* Base text */
 body {
     font-family: "Montserrat", sans-serif;
     background: #f6f6f6;
     color: #555f6b;
 }
 
-/* Layout wrapper */
+/* Wrapper */
 .page-wrapper {
     min-height: 100vh;
 }
 
-/* === FIXED SIDEBAR === */
+/* ===================== */
+/* FIXED LEFT SIDEBAR */
+/* ===================== */
+
 .sidebar {
     width: 290px;
     background: #3BA4D8;
-    color: #fff;
+    color: white;
 
     position: fixed;
     top: 0;
@@ -37,7 +39,7 @@ body {
     overflow: hidden;
 }
 
-/* top group */
+/* Group areas */
 .sidebar-top {
     display: flex;
     flex-direction: column;
@@ -45,15 +47,14 @@ body {
     gap: 8px;
 }
 
-/* bottom group */
 .sidebar-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
-/* Profile pic */
+/* Profile photo */
 .profile-pic img {
     width: 145px;
     height: 145px;
@@ -73,24 +74,24 @@ body {
 /* Title */
 .sidebar-title {
     font-size: 11px;
+    text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: 10px;
 }
 
 /* Navigation */
 .sidebar-nav {
     display: flex;
     flex-direction: column;
+    gap: 6px;
     width: 100%;
     margin-top: 10px;
-    gap: 4px;
 }
 
 .sidebar-nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: 600;
-    padding: 5px;
+    padding: 6px;
     letter-spacing: 1.3px;
 }
 
@@ -98,7 +99,7 @@ body {
     opacity: 0.85;
 }
 
-/* === SOCIAL ICONS === */
+/* Social Icons */
 .sidebar-social {
     display: flex;
     gap: 14px;
@@ -112,41 +113,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     font-size: 18px;
+    color: white;
 }
 
 .sidebar-social a:hover {
     background: #4b5563;
 }
 
-/* Footer */
+/* Footer text */
 .sidebar-footer {
     font-size: 11px;
     opacity: 0.8;
 }
 
-/* === MAIN CONTENT === */
+/* ===================== */
+/* RIGHT SIDE CONTENT */
+/* ===================== */
+
 .content {
     margin-left: 290px;
     padding: 60px 70px;
-    max-width: 900px;
+    max-width: 1100px;  /* wider so name fits */
 }
 
-/* Hero */
+/* HERO title */
 .hero-name {
     font-size: 64px;
     font-weight: 900;
     letter-spacing: 3px;
+    margin-bottom: 12px;
+    white-space: nowrap; /* FIX: force one line */
 }
 
 .hero-name span {
     color: #3BA4D8;
+    white-space: nowrap;
 }
 
 .hero-subtitle {
     font-size: 18px;
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 .hero-location {
@@ -163,9 +170,8 @@ body {
     padding: 8px 20px;
     border: 2px solid #3BA4D8;
     color: #3BA4D8;
-    font-weight: 600;
     text-decoration: none;
-    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .hero-resume:hover {
@@ -179,10 +185,10 @@ body {
 }
 
 .section-title {
-    color: #3BA4D8;
     font-size: 18px;
+    color: #3BA4D8;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 700;
 }
 
@@ -191,7 +197,7 @@ body {
     line-height: 1.7;
 }
 
-/* Experience / Projects */
+/* Experience items */
 .item {
     margin-bottom: 20px;
 }
@@ -212,12 +218,17 @@ body {
     gap: 20px;
 }
 
-/* Responsive fix */
+/* Mobile responsiveness */
 @media (max-width: 900px) {
+
     .sidebar {
         position: relative;
         width: 100%;
         height: auto;
+    }
+
+    .sidebar-name {
+        white-space: normal;
     }
 
     .content {
@@ -225,7 +236,8 @@ body {
         padding: 40px 20px;
     }
 
-    .sidebar-name {
+    .hero-name {
+        font-size: 40px;
         white-space: normal;
     }
 }
