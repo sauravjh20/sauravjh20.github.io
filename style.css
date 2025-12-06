@@ -1,3 +1,25 @@
+h1, h2, h3, h4, h5 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sidebar-name,
+.hero-name {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-weight: 500;
+}
+
+.sidebar-nav a {
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
