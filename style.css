@@ -53,19 +53,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .sidebar-name {
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 1.5px;
     text-align: center;
     margin-bottom: 6px;
     font-weight: 800;
-}
-
-.sidebar-name span {
-    font-weight: 900;
+    white-space: nowrap;   /* keep name on one line */
 }
 
 .sidebar-title {
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 40px;
@@ -93,23 +90,33 @@ h1, h2, h3, h4, h5 {
     opacity: 0.9;
 }
 
-/* Social icons */
+/* Social icons – circular like the example */
 .sidebar-social {
     display: flex;
-    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 18px;
     margin-bottom: 40px;
-    font-size: 20px;
 }
 
 .sidebar-social a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #3a424c;          /* dark gray circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .sidebar-social a:hover {
-    opacity: 0.9;
+    background: #4b5563;
 }
 
+/* Footer in sidebar */
 .sidebar-footer {
     margin-top: auto;
     font-size: 12px;
@@ -273,5 +280,9 @@ a:hover {
     .hero-name {
         font-size: 40px;
         letter-spacing: 2px;
+    }
+
+    .sidebar-name {
+        white-space: normal; /* allow wrap on small screens */
     }
 }
