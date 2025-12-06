@@ -29,43 +29,55 @@ h1, h2, h3, h4, h5 {
 /* Sidebar */
 .sidebar {
     width: 290px;
-    background: #3BA4D8; /* sky blue */
+    background: #3BA4D8;
     color: #fff;
-    padding: 50px 35px;
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* top + bottom fit neatly */
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* no scroll bar */
+}
+
+/* Grouping areas */
+.sidebar-top {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky;
-    top: 0;
-    height: 100vh;
+    gap: 10px;
 }
 
-.profile-pic {
-    margin-bottom: 25px;
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
 .profile-pic img {
-    width: 155px;
-    height: 155px;
+    width: 145px;
+    height: 145px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid rgba(255, 255, 255, 0.9);
 }
 
 .sidebar-name {
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1.5px;
     text-align: center;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 2px;
     font-weight: 800;
-    white-space: nowrap;   /* keep name on one line */
+    white-space: nowrap;   /* keep on one line (desktop) */
 }
 
 .sidebar-title {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     opacity: 0.95;
 }
 
@@ -74,14 +86,15 @@ h1, h2, h3, h4, h5 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 40px;
+    margin-top: 14px;
+    gap: 4px;
 }
 
 .sidebar-nav a {
     text-decoration: none;
     color: #fff;
     font-weight: 600;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 13px;
     letter-spacing: 1.5px;
 }
@@ -90,18 +103,17 @@ h1, h2, h3, h4, h5 {
     opacity: 0.9;
 }
 
-/* Social icons – circular like the example */
+/* Social icons – circular */
 .sidebar-social {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px 18px;
-    margin-bottom: 40px;
+    gap: 14px;
 }
 
 .sidebar-social a {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: #3a424c;          /* dark gray circle */
     display: flex;
@@ -118,15 +130,14 @@ h1, h2, h3, h4, h5 {
 
 /* Footer in sidebar */
 .sidebar-footer {
-    margin-top: auto;
-    font-size: 12px;
+    font-size: 11px;
     opacity: 0.9;
 }
 
 /* Main content */
 .content {
     flex: 1;
-    padding: 60px 80px;
+    padding: 50px 70px;
     max-width: 980px;
 }
 
@@ -136,14 +147,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-name {
-    font-size: 64px;           /* bigger name like example */
+    font-size: 64px;
     letter-spacing: 3px;
     margin-bottom: 12px;
     font-weight: 900;
 }
 
 .hero-name span {
-    color: #3BA4D8; /* sky blue */
+    color: #3BA4D8;
 }
 
 .hero-subtitle {
@@ -185,7 +196,7 @@ h1, h2, h3, h4, h5 {
 
 /* Sections */
 .section {
-    margin-bottom: 60px;  /* more space between sections */
+    margin-bottom: 60px;
 }
 
 .section-title {
@@ -247,7 +258,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
-/* Links */
+/* General links */
 a {
     color: #3BA4D8;
 }
@@ -265,12 +276,11 @@ a:hover {
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
-        text-align: center;
+        padding: 30px 20px;
     }
 
-    .sidebar-nav {
-        align-items: center;
+    .sidebar-name {
+        white-space: normal; /* allow wrap on smaller screens */
     }
 
     .content {
@@ -280,9 +290,5 @@ a:hover {
     .hero-name {
         font-size: 40px;
         letter-spacing: 2px;
-    }
-
-    .sidebar-name {
-        white-space: normal; /* allow wrap on small screens */
     }
 }
