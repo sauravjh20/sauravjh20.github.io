@@ -52,12 +52,14 @@ body {
     gap: 14px;
 }
 
+/* PROFILE PICTURE FIX — NO BLUE TINT */
 .profile-pic img {
     width: 145px;
     height: 145px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #fff;
+    mix-blend-mode: normal !important; /* FIX */
 }
 
 .sidebar-name {
@@ -96,7 +98,7 @@ body {
 /* SIDEBAR SOCIAL ICONS — ONE LINE */
 .sidebar-social {
     display: flex;
-    flex-wrap: nowrap;     /* stay in one row */
+    flex-wrap: nowrap;
     gap: 12px;
     justify-content: center;
     align-items: center;
@@ -140,7 +142,7 @@ body {
     font-size: 64px;
     font-weight: 900;
     letter-spacing: 3px;
-    white-space: nowrap; /* stay on one line */
+    white-space: nowrap;
 }
 
 .hero-name span {
@@ -153,7 +155,7 @@ body {
     color: #5b6470;
 }
 
-/* HERO Contact Line */
+/* HERO CONTACT LINE */
 .hero-contact {
     font-size: 15px;
     margin: 10px 0 20px 0;
@@ -246,7 +248,7 @@ body {
 }
 
 /* ===================== */
-/* SKILL GRID with DEVICONS */
+/* DEVICON SKILL GRID */
 /* ===================== */
 
 .skills-grid {
@@ -294,7 +296,10 @@ body {
     width: 145px;
     height: auto;
     object-fit: contain;
-    mix-blend-mode: multiply;  /* helps white backgrounds blend */
+
+    /* transparency blending for university logos ONLY */
+    mix-blend-mode: multiply;
+    
     border-radius: 8px;
 }
 
