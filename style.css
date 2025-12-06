@@ -93,10 +93,10 @@ body {
     opacity: 0.85;
 }
 
-/* SOCIAL ICONS */
+/* SIDEBAR SOCIAL ICONS — ONE LINE */
 .sidebar-social {
     display: flex;
-    flex-wrap: nowrap;     /* keep in one line */
+    flex-wrap: nowrap;     /* stay in one row */
     gap: 12px;
     justify-content: center;
     align-items: center;
@@ -140,7 +140,7 @@ body {
     font-size: 64px;
     font-weight: 900;
     letter-spacing: 3px;
-    white-space: nowrap;
+    white-space: nowrap; /* stay on one line */
 }
 
 .hero-name span {
@@ -150,6 +150,7 @@ body {
 .hero-subtitle {
     font-size: 18px;
     margin-top: 5px;
+    color: #5b6470;
 }
 
 .hero-location {
@@ -188,16 +189,17 @@ body {
 }
 
 .section-title {
-    font-size: 18px;
-    color: #3BA4D8;
-    margin-bottom: 12px;
+    font-size: 24px;
     letter-spacing: 2px;
-    font-weight: 700;
+    margin-bottom: 15px;
+    color: #3BA4D8;
+    font-weight: 800;
 }
 
 .section p {
     margin-bottom: 12px;
     line-height: 1.7;
+    font-size: 15px;
 }
 
 /* EXPERIENCE */
@@ -263,22 +265,25 @@ body {
 }
 
 /* ===================== */
-/* EDUCATION LAYOUT */
+/* EDUCATION SECTION (Rahul-style layout) */
 /* ===================== */
 
 .edu-entry {
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .edu-logo img {
-    width: 140px;
-    max-width: 140px;
+    width: 145px;
     height: auto;
     object-fit: contain;
-    border-radius: 4px;
+
+    /* MAGIC: this blends white backgrounds */
+    mix-blend-mode: multiply;
+    
+    border-radius: 8px;
 }
 
 .edu-main {
@@ -318,23 +323,17 @@ body {
 }
 
 .edu-dates {
-    min-width: 140px;
+    min-width: 130px;
     text-align: right;
     font-size: 13px;
     color: #3BA4D8;
     font-weight: 600;
 }
 
-/* LINKS */
-a {
-    color: #3BA4D8;
-}
-
-a:hover {
-    opacity: 0.85;
-}
-
+/* ===================== */
 /* RESPONSIVE */
+/* ===================== */
+
 @media (max-width: 900px) {
     .sidebar {
         width: 100%;
@@ -345,10 +344,6 @@ a:hover {
     .content {
         margin-left: 0;
         padding: 40px 20px;
-    }
-
-    .sidebar-name {
-        white-space: normal;
     }
 
     .hero-name {
