@@ -184,20 +184,6 @@ body {
     opacity: 0.8;
 }
 
-.hero-location {
-    margin: 12px 0;
-    font-size: 14px;
-}
-
-.hero-location a {
-    color: #3BA4D8;
-    text-decoration: none;
-}
-
-.hero-phone {
-    white-space: nowrap;
-}
-
 .hero-resume {
     padding: 8px 20px;
     border: 2px solid #3BA4D8;
@@ -260,7 +246,7 @@ body {
 }
 
 /* ===================== */
-/* SKILL LOGO GRID */
+/* SKILL GRID with DEVICONS */
 /* ===================== */
 
 .skills-grid {
@@ -283,10 +269,8 @@ body {
     box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
 
-.skill-card img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
+.skill-card i {
+    font-size: 46px;
     margin-bottom: 8px;
 }
 
@@ -296,7 +280,7 @@ body {
 }
 
 /* ===================== */
-/* EDUCATION SECTION (Rahul-style layout) */
+/* EDUCATION SECTION */
 /* ===================== */
 
 .edu-entry {
@@ -310,10 +294,7 @@ body {
     width: 145px;
     height: auto;
     object-fit: contain;
-
-    /* MAGIC: this blends white backgrounds */
-    mix-blend-mode: multiply;
-    
+    mix-blend-mode: multiply;  /* helps white backgrounds blend */
     border-radius: 8px;
 }
 
