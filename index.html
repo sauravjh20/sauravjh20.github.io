@@ -1,10 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Saurav Jha | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, I'm Saurav!</h1>
-    <p>Welcome to my personal website.</p>
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-pic">
+            <!-- Replace profile.jpg with your own image file name -->
+            <img src="profile.jpg" alt="Saurav Jha">
+        </div>
+        <h1 class="sidebar-name">Saurav <span>Jha</span></h1>
+        <p class="sidebar-title">Software Developer</p>
+
+        <nav class="sidebar-nav">
+            <a href="#about">ABOUT</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#education">EDUCATION</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <div class="sidebar-social">
+            <a href="https://www.linkedin.com/in/sauravjha20" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sauravjh20" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <div class="sidebar-footer">
+            <p>&copy; <span id="year"></span> Saurav Jha</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Header block -->
+        <section class="hero">
+            <h2 class="hero-name">SAURAV <span>JHA</span></h2>
+            <p class="hero-subtitle">Software Developer & Aspiring Backend Engineer</p>
+            <p class="hero-location">California, USA · <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <a class="hero-resume" href="#" target="_blank">Download Résumé</a>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <h3 class="section-title">ABOUT</h3>
+            <p>
+                I am a software developer with experience building backend services and web applications.
+                My interests lie in distributed systems, APIs, and cloud technologies. I enjoy solving real-world
+                problems through clean, maintainable code.
+            </p>
+            <p>
+                Outside of work, I love exploring new technologies, contributing to open-source projects,
+                and continuously improving my skills as a developer.
+            </p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section">
+            <h3 class="section-title">EXPERIENCE</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <h4>Software Developer</h4>
+                    <span class="item-meta">Company Name · 2023 – Present</span>
+                </div>
+                <ul>
+                    <li>Developed and maintained backend REST APIs using Node.js/Express (or your stack).</li>
+                    <li>Worked with relational and NoSQL databases to design efficient data models.</li>
+                    <li>Collaborated with cross-functional teams to deliver features from design to production.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h4>Software Engineering Intern</h4>
+                    <span class="item-meta">Company Name · 2022 – 2023</span>
+                </div>
+                <ul>
+                    <li>Implemented features and fixed bugs in an existing web application.</li>
+                    <li>Wrote unit and integration tests to improve code reliability.</li>
+                    <li>Participated in code reviews and followed agile development practices.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <h3 class="section-title">SKILLS</h3>
+            <div class="skills-grid">
+                <div>
+                    <h4>Languages</h4>
+                    <p>Java · Python · JavaScript · SQL</p>
+                </div>
+                <div>
+                    <h4>Backend & Frameworks</h4>
+                    <p>Node.js · Express · Spring Boot · REST APIs</p>
+                </div>
+                <div>
+                    <h4>Web Technologies</h4>
+                    <p>HTML5 · CSS3 · React (basic) · Bootstrap</p>
+                </div>
+                <div>
+                    <h4>Tools & Platforms</h4>
+                    <p>Git · GitHub · Docker · Linux · Postman</p>
+                </div>
+                <div>
+                    <h4>Databases</h4>
+                    <p>MySQL · PostgreSQL · MongoDB</p>
+                </div>
+                <div>
+                    <h4>Other</h4>
+                    <p>Data Structures & Algorithms · OOP · Agile</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section">
+            <h3 class="section-title">EDUCATION</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <h4>Bachelor of Science in Computer Science</h4>
+                    <span class="item-meta">Your University · 20XX – 20XX</span>
+                </div>
+                <p>Relevant coursework: Data Structures, Algorithms, Databases, Operating Systems, Web Development.</p>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <h3 class="section-title">PROJECTS</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <h4>Project Name 1</h4>
+                    <span class="item-meta"><a href="https://github.com/sauravjh20" target="_blank">View on GitHub</a></span>
+                </div>
+                <p>
+                    Short description of what the project does, technologies used, and what you contributed.
+                    For example: "Built a full-stack web app for tracking tasks using React, Node.js, and MongoDB."
+                </p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h4>Project Name 2</h4>
+                    <span class="item-meta"><a href="https://github.com/sauravjh20" target="_blank">View on GitHub</a></span>
+                </div>
+                <p>
+                    Another project description. Highlight the problem solved, tech stack, and your role.
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <h3 class="section-title">CONTACT</h3>
+            <p>
+                I’m currently open to internship and full-time opportunities in software development.
+                Feel free to reach out if you’d like to collaborate or just say hi.
+            </p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a><br>
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sauravjha20" target="_blank">linkedin.com/in/sauravjha20</a><br>
+                <strong>GitHub:</strong> <a href="https://github.com/sauravjh20" target="_blank">github.com/sauravjh20</a>
+            </p>
+        </section>
+    </main>
+</div>
+
+<script>
+    // Set footer year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
