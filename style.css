@@ -153,6 +153,37 @@ body {
     color: #5b6470;
 }
 
+/* HERO Contact Line */
+.hero-contact {
+    font-size: 15px;
+    margin: 10px 0 20px 0;
+    color: #5b6470;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-contact span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-contact i {
+    color: #3BA4D8;
+    font-size: 16px;
+}
+
+.hero-contact a {
+    color: #3BA4D8;
+    text-decoration: none;
+}
+
+.hero-contact a:hover {
+    opacity: 0.8;
+}
+
 .hero-location {
     margin: 12px 0;
     font-size: 14px;
