@@ -20,24 +20,29 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 1px;
 }
 
-/* Layout */
+/* Layout wrapper */
 .page-wrapper {
-    display: flex;
     min-height: 100vh;
 }
 
-/* Sidebar */
+/* === SIDEBAR (fixed on the left) === */
 .sidebar {
     width: 290px;
     background: #3BA4D8;
     color: #fff;
     padding: 24px 22px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* top + bottom fit neatly */
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    overflow: hidden; /* no scroll bar */
+
+    overflow: hidden; /* no scroll bar in sidebar */
 }
 
 /* Grouping areas */
@@ -55,6 +60,7 @@ h1, h2, h3, h4, h5 {
     gap: 12px;
 }
 
+/* Profile */
 .profile-pic img {
     width: 145px;
     height: 145px;
@@ -115,7 +121,7 @@ h1, h2, h3, h4, h5 {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: #3a424c;          /* dark gray circle */
+    background: #3a424c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,9 +140,9 @@ h1, h2, h3, h4, h5 {
     opacity: 0.9;
 }
 
-/* Main content */
+/* === MAIN CONTENT (scrolls on the right) === */
 .content {
-    flex: 1;
+    margin-left: 290px;        /* make space for fixed sidebar */
     padding: 50px 70px;
     max-width: 980px;
 }
@@ -267,23 +273,21 @@ a:hover {
     opacity: 0.8;
 }
 
-/* Responsive */
+/* === Responsive === */
 @media (max-width: 900px) {
-    .page-wrapper {
-        flex-direction: column;
-    }
-
     .sidebar {
+        position: static;     /* no fixed sidebar on mobile */
         width: 100%;
         height: auto;
         padding: 30px 20px;
     }
 
     .sidebar-name {
-        white-space: normal; /* allow wrap on smaller screens */
+        white-space: normal;  /* allow wrapping on small screens */
     }
 
     .content {
+        margin-left: 0;       /* full width content */
         padding: 40px 20px;
     }
 
