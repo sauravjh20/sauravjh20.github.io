@@ -76,6 +76,7 @@ body {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 /* Navigation */
@@ -103,6 +104,8 @@ body {
 .sidebar-social {
     display: flex;
     gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .sidebar-social a {
@@ -125,6 +128,7 @@ body {
 .sidebar-footer {
     font-size: 11px;
     opacity: 0.8;
+    text-align: center;
 }
 
 /* ===================== */
@@ -134,7 +138,7 @@ body {
 .content {
     margin-left: 290px;
     padding: 60px 70px;
-    max-width: 1100px;  /* wider so name fits */
+    max-width: 1100px;  /* wider so hero name fits on one line */
 }
 
 /* HERO title */
@@ -143,7 +147,7 @@ body {
     font-weight: 900;
     letter-spacing: 3px;
     margin-bottom: 12px;
-    white-space: nowrap; /* FIX: force one line */
+    white-space: nowrap; /* keep single line */
 }
 
 .hero-name span {
@@ -154,15 +158,22 @@ body {
 .hero-subtitle {
     font-size: 18px;
     margin-top: 5px;
+    color: #5b6470;
 }
 
 .hero-location {
     margin: 12px 0;
+    font-size: 14px;
+    color: #6b7580;
 }
 
 .hero-location a {
     color: #3BA4D8;
     text-decoration: none;
+}
+
+.hero-phone {
+    white-space: nowrap;
 }
 
 /* Resume button */
@@ -172,6 +183,9 @@ body {
     color: #3BA4D8;
     text-decoration: none;
     font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 .hero-resume:hover {
@@ -199,23 +213,49 @@ body {
 
 /* Experience items */
 .item {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .item-header {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+}
+
+.item-header h4 {
+    font-size: 16px;
 }
 
 .item-meta {
     color: #8492a6;
+    font-size: 13px;
+    text-align: right;
+}
+
+.item ul {
+    margin-left: 20px;
+    line-height: 1.7;
 }
 
 /* Skills grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+}
+
+.skills-grid h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/* Links */
+a {
+    color: #3BA4D8;
+}
+
+a:hover {
+    opacity: 0.85;
 }
 
 /* Mobile responsiveness */
