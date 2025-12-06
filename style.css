@@ -13,7 +13,7 @@ body {
     font-size: 15px;
 }
 
-/* Make headings look strong like Rahul's */
+/* Make headings look strong */
 h1, h2, h3, h4, h5 {
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 800;
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5 {
 /* Sidebar */
 .sidebar {
     width: 280px;
-    background: #ba5a33; /* warm orange */
+    background: #3BA4D8; /* sky blue */
     color: #fff;
     padding: 40px 30px;
     display: flex;
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-name span {
-    color: #ba5a33;
+    color: #3BA4D8; /* sky blue */
 }
 
 .hero-subtitle {
@@ -147,16 +147,17 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-location a {
-    color: #ba5a33;
+    color: #3BA4D8;
     text-decoration: none;
 }
 
+/* Resume Button */
 .hero-resume {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 18px;
-    border: 2px solid #ba5a33;
-    color: #ba5a33;
+    border: 2px solid #3BA4D8;
+    color: #3BA4D8;
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
@@ -165,7 +166,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-resume:hover {
-    background: #ba5a33;
+    background: #3BA4D8;
     color: #fff;
 }
 
@@ -177,7 +178,7 @@ h1, h2, h3, h4, h5 {
 .section-title {
     font-size: 16px;
     letter-spacing: 2px;
-    color: #ba5a33;
+    color: #3BA4D8;
     margin-bottom: 15px;
     font-weight: 700;
 }
@@ -233,7 +234,7 @@ h1, h2, h3, h4, h5 {
 
 /* Links */
 a {
-    color: #ba5a33;
+    color: #3BA4D8;
 }
 
 a:hover {
@@ -265,4 +266,3 @@ a:hover {
         font-size: 34px;
     }
 }
-
