@@ -46,11 +46,14 @@ body {
 }
 
 .sidebar-bottom {
+    margin-top: auto;        /* pushes bottom content down */
+    padding-bottom: 40px;    /* adds clean spacing at bottom */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 25px;               /* more space between icons */
 }
+
 
 /* PROFILE PICTURE FIX — NO BLUE TINT */
 .profile-pic img {
