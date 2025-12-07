@@ -209,6 +209,28 @@ body {
 }
 
 /* SECTIONS */
+
+/* Countries lived flags (Instagram style) */
+.countries-lived {
+    margin-top: 14px;
+    font-size: 15px;
+}
+
+.countries-lived span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 14px; /* spacing between flags */
+}
+
+.countries-lived img {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 4px;  /* smooth corners like Instagram */
+    border: 1px solid #dcdcdc;
+}
+
 .section {
     margin: 60px 0;
 }
