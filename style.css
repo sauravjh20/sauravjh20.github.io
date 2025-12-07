@@ -95,13 +95,11 @@ body {
     opacity: 0.85;
 }
 
-/* SIDEBAR SOCIAL ICONS — ONE LINE */
 .sidebar-social {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 40px); /* 3 icons per row */
+    gap: 12px 18px;
     justify-content: center;
-    align-items: center;
 }
 
 .sidebar-social a {
