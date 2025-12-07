@@ -254,6 +254,58 @@ body {
 }
 
 /* ===================== */
+/* EXPERIENCE SECTION (with logos, like education) */
+/* ===================== */
+
+.exp-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.exp-logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;  /* nice blending if logo backgrounds are white */
+    border-radius: 8px;
+}
+
+.exp-main {
+    flex: 1;
+}
+
+.exp-main h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.exp-company {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.exp-list {
+    margin-left: 18px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.exp-dates {
+    min-width: 150px;
+    text-align: right;
+    font-size: 13px;
+    color: #3BA4D8;
+    font-weight: 600;
+}
+
+
+/* ===================== */
 /* DEVICON SKILL GRID */
 /* ===================== */
 
@@ -383,4 +435,26 @@ body {
         text-align: left;
         margin-top: 6px;
     }
+
+    @media (max-width: 900px) {
+
+    /* ...your existing mobile styles... */
+
+    /* EXPERIENCE – mobile layout */
+    .exp-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exp-dates {
+        text-align: left;
+        margin-top: 6px;
+    }
+
+    .exp-logo img {
+        width: 100px; /* slightly smaller for phones */
+        margin-bottom: 10px;
+    }
+}
+
 }
