@@ -28,28 +28,80 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
+
     padding: 24px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    overflow: hidden;
 }
 
-/* PROFILE PIC */
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+/* PROFILE PICTURE FIX — NO BLUE TINT */
 .profile-pic img {
     width: 145px;
     height: 145px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #fff;
+    mix-blend-mode: normal !important; /* FIX */
 }
 
-/* SOCIAL ICON GRID (3 per row) */
+.sidebar-name {
+    font-size: 20px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.sidebar-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* NAVIGATION */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px;
+    letter-spacing: 1.3px;
+}
+
+.sidebar-nav a:hover {
+    opacity: 0.85;
+}
+
+/* SIDEBAR SOCIAL ICONS — ONE LINE */
 .sidebar-social {
-    display: grid;
-    grid-template-columns: repeat(3, 40px);
-    gap: 14px 18px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
     justify-content: center;
+    align-items: center;
 }
 
 .sidebar-social a {
@@ -61,46 +113,268 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .sidebar-social a:hover {
     background: #4b5563;
 }
 
-/* CONTENT */
+/* FOOTER */
+.sidebar-footer {
+    font-size: 11px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* ===================== */
+/* RIGHT CONTENT */
+/* ===================== */
+
 .content {
     margin-left: 290px;
     padding: 60px 70px;
     max-width: 1100px;
 }
 
-/* HERO NAME */
+/* HERO */
 .hero-name {
     font-size: 64px;
     font-weight: 900;
     letter-spacing: 3px;
+    white-space: nowrap;
 }
 
 .hero-name span {
     color: #3BA4D8;
 }
 
-/* CONTACT ICON COLORS */
-.hero-contact i {
-    color: #3BA4D8;
+.hero-subtitle {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #5b6470;
 }
 
+/* HERO CONTACT LINE */
+.hero-contact {
+    font-size: 15px;
+    margin: 10px 0 20px 0;
+    color: #5b6470;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-contact span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-contact i {
+    color: #3BA4D8;
+    font-size: 16px;
+}
+
+.hero-contact a {
+    color: #3BA4D8;
+    text-decoration: none;
+}
+
+.hero-contact a:hover {
+    opacity: 0.8;
+}
+
+.hero-resume {
+    padding: 8px 20px;
+    border: 2px solid #3BA4D8;
+    color: #3BA4D8;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.hero-resume:hover {
+    background: #3BA4D8;
+    color: white;
+}
+
+/* SECTIONS */
+.section {
+    margin: 60px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #3BA4D8;
+    font-weight: 800;
+}
+
+.section p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* EXPERIENCE */
+.item {
+    margin-bottom: 22px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item-header h4 {
+    font-size: 16px;
+}
+
+.item-meta {
+    color: #8492a6;
+    font-size: 13px;
+    text-align: right;
+}
+
+.item ul {
+    margin-left: 20px;
+    line-height: 1.7;
+}
+
+/* ===================== */
+/* DEVICON SKILL GRID */
+/* ===================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    transition: 0.2s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.skill-card i {
+    font-size: 46px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ===================== */
+/* EDUCATION SECTION */
+/* ===================== */
+
+.edu-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.edu-logo img {
+    width: 145px;
+    height: auto;
+    object-fit: contain;
+
+    /* transparency blending for university logos ONLY */
+    mix-blend-mode: multiply;
+    
+    border-radius: 8px;
+}
+
+.edu-main {
+    flex: 1;
+}
+
+.edu-main h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.edu-degree {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.edu-location {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.edu-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.edu-list {
+    margin-left: 18px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.edu-dates {
+    min-width: 130px;
+    text-align: right;
+    font-size: 13px;
+    color: #3BA4D8;
+    font-weight: 600;
+}
+
+/* ===================== */
 /* RESPONSIVE */
+/* ===================== */
+
 @media (max-width: 900px) {
     .sidebar {
         width: 100%;
-        height: auto;
         position: relative;
+        height: auto;
     }
 
     .content {
         margin-left: 0;
         padding: 40px 20px;
+    }
+
+    .hero-name {
+        font-size: 40px;
+        white-space: normal;
+    }
+
+    .edu-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edu-dates {
+        text-align: left;
+        margin-top: 6px;
     }
 }
