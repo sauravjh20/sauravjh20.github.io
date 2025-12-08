@@ -146,11 +146,13 @@ body {
 
 /* HERO */
 .hero-name {
-    font-size: 64px;
+    font-size: clamp(32px, 5vw, 64px); 
     font-weight: 900;
     letter-spacing: 3px;
-    white-space: nowrap;
+    line-height: 1.1;
+    white-space: normal;               
 }
+
 
 .hero-name span {
     color: #3BA4D8;
@@ -467,9 +469,9 @@ body {
     }
 
     .hero-name {
-        font-size: 40px;
-        white-space: normal;
+        font-size: clamp(28px, 8vw, 40px);
     }
+}
 
     /* EDUCATION – mobile layout */
     .edu-entry {
