@@ -211,14 +211,15 @@ body {
 
 /* SECTIONS */
 
-/* Countries lived flags (Instagram style) */
 .countries-lived img {
-    width: 20px;
-    height: 15px;           /* smaller height prevents clipping */
-    object-fit: contain;
+    width: 24px;          
+    height: 18px;          
+    object-fit: contain;  
+    vertical-align: middle;
     border-radius: 3px;
-    vertical-align: middle; /* prevents cutting from top/bottom */
+    border: none;          
 }
+
 
 
 .countries-lived span {
