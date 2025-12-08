@@ -141,7 +141,6 @@ body {
 .content {
     margin-left: 290px;     
     padding: 60px 80px;     
-    width: calc(100% - 290px);
 }
 
 
@@ -444,9 +443,10 @@ body {
         height: auto;
     }
 
-      .content {
+     .content {
         margin-left: 0;
         padding: 40px 20px;
+        width: 100%;      
     }
 
     .content-inner {
