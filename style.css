@@ -220,21 +220,32 @@ body {
     border: none;          
 }
 
+.countries-lived {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.6;        /* normal paragraph line height */
+}
+
+.countries-lived strong {
+    margin-right: 8px;       /* space after label */
+}
 
 
 .countries-lived span {
-    display: inline-flex;
+    display: inline-flex;    
     align-items: center;
     gap: 4px;
-    margin-right: 14px; /* spacing between flags */
+    margin-right: 10px;
+    vertical-align: baseline;
 }
 
 .countries-lived img {
-    width: 18px;
-    height: 18px;
-    object-fit: cover;
-    border-radius: 4px;  /* smooth corners like Instagram */
-    border: 1px solid #dcdcdc;
+    width: 20px;             /* not too big, helps sharpness */
+    height: 14px;
+    display: block;          /* prevents top/left clipping */
+    object-fit: contain;
+    border-radius: 3px;
+    border: none;
 }
 
 .section {
