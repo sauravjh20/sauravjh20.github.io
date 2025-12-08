@@ -139,13 +139,14 @@ body {
 
 /* RIGHT CONTENT */
 .content {
-    margin-left: 290px;        /* space for sidebar */
-    padding: 60px 30px;        /* outer padding */
+    margin-left: 290px;     
+    padding: 60px 80px;     
+    width: calc(100% - 290px);
 }
 
 .content-inner {
-    max-width: 1100px;         /* similar width to what you had */
-    margin: 0 auto;            /* centers it horizontally */
+    width: 100%;
+    margin: 0;
 }
 
 
