@@ -615,49 +615,46 @@ body {
   }
 }
 
-/* SMARTPHONE IN DESKTOP-MODE (portrait) */
-@media (min-width: 901px) and (max-width: 1100px) and (max-height: 750px) {
+/* VERY SHORT DESKTOP VIEW (phone in desktop mode, portrait, etc.) */
+@media (min-width: 901px) and (max-height: 750px) {
 
-    /* shrink the sidebar padding */
+    /* slightly shrink sidebar elements */
     .sidebar {
         padding: 16px 16px;
     }
 
-    /* shrink profile picture */
     .profile-pic img {
         width: 105px;
         height: 105px;
     }
 
-    /* tighten top spacing */
     .sidebar-top {
         gap: 4px;
     }
 
-    /* compress nav items */
     .sidebar-nav a {
         font-size: 12px;
         padding: 4px 0;
         margin: 1px 0;
     }
 
-    /* bring icons RIGHT under CONTACT */
+    /* 👇 IMPORTANT: bring icons right under CONTACT */
     .sidebar-bottom {
-        margin-top: 16px;   /* not auto → pulls icons up */
+        margin-top: 16px;   /* overrides margin-top: auto */
         gap: 10px;
         padding-bottom: 10px;
     }
 
-    /* icons slightly smaller */
     .sidebar-social a {
         width: 32px;
         height: 32px;
         font-size: 15px;
     }
 
-    /* footer sits directly under icons */
+    /* footer stays directly under icons */
     .sidebar-footer {
         margin-top: 6px;
         font-size: 10px;
     }
 }
+
