@@ -615,46 +615,4 @@ body {
   }
 }
 
-/* VERY SHORT DESKTOP VIEW (phone in desktop mode, portrait, etc.) */
-@media (min-width: 901px) and (max-height: 750px) {
-
-    /* slightly shrink sidebar elements */
-    .sidebar {
-        padding: 16px 16px;
-    }
-
-    .profile-pic img {
-        width: 105px;
-        height: 105px;
-    }
-
-    .sidebar-top {
-        gap: 4px;
-    }
-
-    .sidebar-nav a {
-        font-size: 12px;
-        padding: 4px 0;
-        margin: 1px 0;
-    }
-
-    /* 👇 IMPORTANT: bring icons right under CONTACT */
-    .sidebar-bottom {
-        margin-top: 16px;   /* overrides margin-top: auto */
-        gap: 10px;
-        padding-bottom: 10px;
-    }
-
-    .sidebar-social a {
-        width: 32px;
-        height: 32px;
-        font-size: 15px;
-    }
-
-    /* footer stays directly under icons */
-    .sidebar-footer {
-        margin-top: 6px;
-        font-size: 10px;
-    }
-}
 
