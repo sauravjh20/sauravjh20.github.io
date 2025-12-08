@@ -450,36 +450,75 @@ body {
 /* RESPONSIVE */
 /* ===================== */
 
+/* *************  MOBILE / TABLET (<= 900px)  ************* */
 @media (max-width: 900px) {
+
+    /* SIDEBAR LAYOUT */
     .sidebar {
         width: 100%;
         position: relative;
-        height: auto;
+        height: auto;         /* sidebar grows with content */
     }
 
-     .sidebar-social a {
+    .sidebar-top {
+        gap: 4px;
+    }
+
+    .profile-pic img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .sidebar-nav a {
+        padding: 4px 0;
+        margin: 2px 0;
+    }
+
+    /* SOCIAL ICONS */
+    .sidebar-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .sidebar-social a {
         width: 32px;
         height: 32px;
         font-size: 14px;
     }
 
-     .content {
+    /* ICONS + FOOTER SPACING */
+    .sidebar-bottom {
+        margin-top: 24px;      /* icons sit neatly below CONTACT */
+        padding-bottom: 24px;
+        gap: 10px;
+    }
+
+    .sidebar-footer {
+        margin-top: 8px;
+        font-size: 11px;
+    }
+
+    /* CONTENT AREA */
+    .content {
         margin-left: 0;
         padding: 40px 20px;
-        width: 100%;      
+        width: 100%;
     }
 
     .content-inner {
         max-width: 100%;
-        margin: 0;             /* use full width on mobile */
+        margin: 0;
     }
 
+    /* HERO NAME */
     .hero-name {
         font-size: clamp(28px, 8vw, 40px);
+        white-space: normal;
     }
-}
 
-    /* EDUCATION – mobile layout */
+    /* EDUCATION SECTION – MOBILE */
     .edu-entry {
         flex-direction: column;
         align-items: flex-start;
@@ -490,7 +529,7 @@ body {
         margin-top: 6px;
     }
 
-    /* EXPERIENCE – mobile layout */
+    /* EXPERIENCE SECTION – MOBILE */
     .exp-entry {
         flex-direction: column;
         align-items: flex-start;
@@ -502,40 +541,8 @@ body {
     }
 
     .exp-logo img {
-        width: 100px;            /* slightly smaller for phones */
+        width: 100px;
         margin-bottom: 10px;
     }
-
-     .sidebar-bottom {
-        padding-bottom: 10px;
-        gap: 10px;
-    }
-
-    .sidebar-footer {
-        margin-top: 18px;        /* gap between icons and © text */
-    }
-
-    
- .sidebar-nav a {
-        padding: 4px 0;
-        margin: 2px 0;
-    }
-
-  .profile-pic img {
-        width: 110px;
-        height: 110px;
-    }
-
- .sidebar-top {
-        gap: 4px;
-    }
-
-.sidebar-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
 }
 
- 
-}
