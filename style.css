@@ -452,6 +452,7 @@ body {
         white-space: normal;
     }
 
+    /* EDUCATION – mobile layout */
     .edu-entry {
         flex-direction: column;
         align-items: flex-start;
@@ -461,10 +462,6 @@ body {
         text-align: left;
         margin-top: 6px;
     }
-
-    @media (max-width: 900px) {
-
-    /* ...your existing mobile styles... */
 
     /* EXPERIENCE – mobile layout */
     .exp-entry {
@@ -478,9 +475,22 @@ body {
     }
 
     .exp-logo img {
-        width: 100px; /* slightly smaller for phones */
+        width: 100px;            /* slightly smaller for phones */
         margin-bottom: 10px;
     }
-}
 
+    /* SIDEBAR BOTTOM – more space between CONTACT, icons, and footer */
+    .sidebar-bottom {
+        margin-top: 30px;        /* pushes icons further down */
+        padding-bottom: 30px;    /* space under icons/footer */
+    }
+
+    .sidebar-footer {
+        margin-top: 18px;        /* gap between icons and © text */
+    }
+
+    /* Optional: more breathing room between nav items */
+    .sidebar-nav a {
+        padding: 10px 0;
+    }
 }
