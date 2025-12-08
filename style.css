@@ -546,3 +546,31 @@ body {
     }
 }
 
+/* Short-height laptops/desktops (like 1366x768) */
+@media (min-width: 901px) and (max-height: 800px) {
+
+    /* tighten sidebar padding a bit */
+    .sidebar {
+        padding: 18px 18px;
+    }
+
+    /* slightly smaller profile + name area */
+    .profile-pic img {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* nav items a bit more compact so we free vertical space */
+    .sidebar-nav a {
+        font-size: 13px;
+        padding: 4px 0;
+        margin: 1px 0;
+    }
+
+    /* shrink the footer block so icons can sit lower */
+    .sidebar-bottom {
+        padding-bottom: 20px;   /* closer to the bottom edge */
+    }
+}
+
+
