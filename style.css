@@ -144,11 +144,6 @@ body {
     width: calc(100% - 290px);
 }
 
-.content-inner {
-    width: 100%;
-    margin: 0;
-}
-
 
 /* HERO */
 .hero-name {
