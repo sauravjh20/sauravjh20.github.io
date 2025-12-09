@@ -55,8 +55,8 @@ body {
 
 /* PROFILE PICTURE FIX — NO BLUE TINT */
 .profile-pic img {
-    width: 145px;
-    height: 145px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #fff;
@@ -465,8 +465,8 @@ body {
     }
 
     .profile-pic img {
-        width: 110px;
-        height: 110px;
+        width: 130px;
+        height: 130px;
     }
 
     .sidebar-nav a {
@@ -556,8 +556,8 @@ body {
 
     /* slightly smaller profile + name area */
     .profile-pic img {
-        width: 130px;
-        height: 130px;
+        width: 160px;
+        height: 160px;
     }
 
     /* nav items a bit more compact so we free vertical space */
@@ -581,8 +581,8 @@ body {
   }
 
   .profile-pic img {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
   }
 
   .sidebar-name {
